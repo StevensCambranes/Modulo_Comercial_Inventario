@@ -32,7 +32,6 @@ namespace Capa_Vista_Inventario
 
         // ==================== Stevens Cambranes 05/11/2025 ====================
         // ==================== Formateo de Celdas (DGV) ====================
-        // (Se ejecuta después de que el DGV se llena de datos para formatear números y fechas)
         private void Dgv_Vista_Inventarios_Pasados_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             try
@@ -70,17 +69,15 @@ namespace Capa_Vista_Inventario
 
         // ==================== Stevens Cambranes 28/10/25 ====================
         // ==================== Botón Nuevo Inventario ====================
-        // (Abre el formulario 'Frm_Inventario' para agregar un nuevo producto)
         private void Btn_Nuevo_Inventario_Click(object sender, EventArgs e)
         {
-            Frm_Inventario NuevoInventario = new Frm_Inventario();
-            NuevoInventario.Show(); // Muestra el nuevo formulario
-            this.Hide(); // Oculta este formulario
+            Frm_Inventario frmNuevoInventario = new Frm_Inventario(); // Estandarizado
+            frmNuevoInventario.Show();
+            this.Hide();
         }
 
         // ==================== Stevens Cambranes 05/11/2025 ====================
         // ==================== Botón Imprimir PDF ====================
-        // (Exporta el contenido del DataGridView a un archivo PDF)
         private void Btn_Imprimir_PDF_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Seguro que quiere generar el PDF?", "Generar PDF", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
@@ -88,37 +85,37 @@ namespace Capa_Vista_Inventario
                 if (Dgv_Vista_Inventarios_Pasados.Rows.Count == 0)
                 {
                     MessageBox.Show("No hay datos para imprimir.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return; // Sale del método si no hay datos
+                    return;
                 }
 
-                SaveFileDialog saveDialog = new SaveFileDialog
+                SaveFileDialog sfdGuardar = new SaveFileDialog // Estandarizado
                 {
                     Filter = "Archivo PDF (*.pdf)|*.pdf",
                     Title = "Guardar Reporte de Histórico",
                     FileName = $"Reporte_De_Inventario_{DateTime.Now:dd-MM-yyyy}.pdf"
                 };
 
-                if (saveDialog.ShowDialog() == DialogResult.OK)
+                if (sfdGuardar.ShowDialog() == DialogResult.OK) // Estandarizado
                 {
                     try
                     {
-                        Document doc = new Document(PageSize.A4.Rotate(), 10f, 10f, 20f, 10f);
-                        PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(saveDialog.FileName, FileMode.Create));
-                        doc.Open();
+                        Document docReporte = new Document(PageSize.A4.Rotate(), 10f, 10f, 20f, 10f); // Estandarizado
+                        PdfWriter writer = PdfWriter.GetInstance(docReporte, new FileStream(sfdGuardar.FileName, FileMode.Create)); // Estandarizado
+                        docReporte.Open();
 
                         Paragraph titulo = new Paragraph("Reporte Histórico de Inventario",
                             FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 18, BaseColor.BLACK));
                         titulo.Alignment = Element.ALIGN_CENTER;
-                        doc.Add(titulo);
-                        doc.Add(Chunk.NEWLINE);
+                        docReporte.Add(titulo); // Estandarizado
+                        docReporte.Add(Chunk.NEWLINE);
 
                         PdfPTable pdfTable = new PdfPTable(Dgv_Vista_Inventarios_Pasados.Columns.Count);
                         pdfTable.WidthPercentage = 100;
 
                         // Agrega los encabezados
-                        foreach (DataGridViewColumn column in Dgv_Vista_Inventarios_Pasados.Columns)
+                        foreach (DataGridViewColumn colReporte in Dgv_Vista_Inventarios_Pasados.Columns) // Estandarizado
                         {
-                            PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText,
+                            PdfPCell cell = new PdfPCell(new Phrase(colReporte.HeaderText, // Estandarizado
                                 FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 10, BaseColor.WHITE)));
                             cell.BackgroundColor = new BaseColor(45, 75, 125);
                             cell.HorizontalAlignment = Element.ALIGN_CENTER;
@@ -126,37 +123,37 @@ namespace Capa_Vista_Inventario
                         }
 
                         // Agrega las filas (aplicando el mismo formato que el DGV)
-                        foreach (DataGridViewRow row in Dgv_Vista_Inventarios_Pasados.Rows)
+                        foreach (DataGridViewRow rowReporte in Dgv_Vista_Inventarios_Pasados.Rows) // Estandarizado
                         {
-                            foreach (DataGridViewCell cell in row.Cells)
+                            foreach (DataGridViewCell cellReporte in rowReporte.Cells) // Estandarizado
                             {
-                                string cellValue = cell.Value != null ? cell.Value.ToString() : "";
+                                string sCellValue = cellReporte.Value != null ? cellReporte.Value.ToString() : ""; // Estandarizado
 
                                 // Aplica formato a los números y fechas para el PDF
-                                if (cell.OwningColumn.Name == "Cmp_Cantidad")
+                                if (cellReporte.OwningColumn.Name == "Cmp_Cantidad")
                                 {
-                                    cellValue = string.Format("{0:N4}", cell.Value);
+                                    sCellValue = string.Format("{0:N4}", cellReporte.Value);
                                 }
-                                else if (cell.OwningColumn.Name == "CostoEnEseMomento" || cell.OwningColumn.Name == "ValorTotal")
+                                else if (cellReporte.OwningColumn.Name == "CostoEnEseMomento" || cellReporte.OwningColumn.Name == "ValorTotal")
                                 {
-                                    cellValue = string.Format("{0:N2}", cell.Value);
+                                    sCellValue = string.Format("{0:N2}", cellReporte.Value);
                                 }
-                                else if (cell.OwningColumn.Name == "Cmp_Fecha" || cell.OwningColumn.Name == "Cmp_FechaCierre")
+                                else if (cellReporte.OwningColumn.Name == "Cmp_Fecha" || cellReporte.OwningColumn.Name == "Cmp_FechaCierre")
                                 {
-                                    cellValue = string.Format("{0:d}", cell.Value);
+                                    sCellValue = string.Format("{0:d}", cellReporte.Value);
                                 }
 
-                                pdfTable.AddCell(new Phrase(cellValue,
+                                pdfTable.AddCell(new Phrase(sCellValue, // Estandarizado
                                     FontFactory.GetFont(FontFactory.HELVETICA, 9, BaseColor.BLACK)));
                             }
                         }
 
-                        doc.Add(pdfTable);
-                        doc.Close();
+                        docReporte.Add(pdfTable); // Estandarizado
+                        docReporte.Close(); // Estandarizado
                         writer.Close();
 
                         MessageBox.Show("Reporte PDF generado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        System.Diagnostics.Process.Start(saveDialog.FileName); // Abre el PDF
+                        System.Diagnostics.Process.Start(sfdGuardar.FileName); // Abre el PDF
                     }
                     catch (Exception ex)
                     {
@@ -166,21 +163,18 @@ namespace Capa_Vista_Inventario
             }
         }
 
-        // (Busca tu método Btn_Buscar_Inventario_Click y reemplázalo por este)
-
         // ==================== Stevens Cambranes 05/11/2025 ====================
         // ==================== Botón Buscar Inventario (Actualizado) ====================
-        // (Se agrega lógica para "Ver Todos Los Movimientos")
         private void Btn_Buscar_Inventario_Click(object sender, EventArgs e)
         {
             try
             {
-                DataTable dt = new DataTable();
+                DataTable dtResultado = new DataTable(); // Estandarizado
 
                 if (Rdb_Ver_Historicos.Checked)
                 {
                     // MODO 1: BÚSQUEDA EN CIERRES
-                    dt = controlador.Ctr_CargarTodosLosCierres();
+                    dtResultado = controlador.Ctr_CargarTodosLosCierres(); // Estandarizado
                 }
                 else if (Rdb_Usar_Filtros_Busqueda.Checked)
                 {
@@ -195,37 +189,39 @@ namespace Capa_Vista_Inventario
                     }
 
                     // Recolecta todos los filtros
-                    string tipoMovimiento = Cbo_Tipo_Operacion.Text;
-                    if (tipoMovimiento == "Ver Todos Los Movimientos")
+                    string sTipoMovimiento = Cbo_Tipo_Operacion.Text; // Estandarizado
+                    if (sTipoMovimiento == "Ver Todos Los Movimientos")
                     {
-                        tipoMovimiento = null; // O string.Empty
+                        sTipoMovimiento = null;
                     }
 
-                    int? idAlmacen = (Rdb_Filtro_Almacen.Checked && Cbo_Filtro_Almacen.SelectedValue != null)
-                                        ? (int?)Cbo_Filtro_Almacen.SelectedValue : null;
-                    int? idEstado = (Rdb_Filtro_Estado.Checked && Cbo_Filtro_Estado.SelectedValue != null)
-                                        ? (int?)Cbo_Filtro_Estado.SelectedValue : null;
-                    bool usarRango = Rdb_Filtro_Rango_Fecha.Checked;
-                    DateTime fechaInicio = Dtp_Filtro_Rango_Fecha_Inicio.Value.Date;
-                    DateTime fechaFin = Dtp_Filtro_Rango_Fecha_Fin.Value.Date;
+                    int? iIdAlmacen = (Rdb_Filtro_Almacen.Checked && Cbo_Filtro_Almacen.SelectedValue != null) ?
+                                      (int?)Cbo_Filtro_Almacen.SelectedValue : null; // Estandarizado
 
-                    string orden = "mov.Cmp_Fecha_Movimiento DESC"; // Default
-                    if (Rdb_Filtro_Menos_Recientes.Checked) orden = "mov.Cmp_Fecha_Movimiento ASC";
-                    else if (Rdb_Filtro_Valor_Mas_Alto.Checked) orden = "ValorTotal DESC";
-                    else if (Rdb_Filtro_Valor_Mas_Bajo.Checked) orden = "ValorTotal ASC";
+                    int? iIdEstado = (Rdb_Filtro_Estado.Checked && Cbo_Filtro_Estado.SelectedValue != null) ?
+                                     (int?)Cbo_Filtro_Estado.SelectedValue : null; // Estandarizado
 
-                    // Llama al controlador. Si tipoMovimiento es 'null', el Modelo lo ignorará.
-                    dt = controlador.Ctr_ObtenerHistorico(
-                        tipoMovimiento, idAlmacen, idEstado,
-                        usarRango, fechaInicio, fechaFin, orden
+                    bool bUsarRango = Rdb_Filtro_Rango_Fecha.Checked; // Estandarizado
+                    DateTime dFechaInicio = Dtp_Filtro_Rango_Fecha_Inicio.Value.Date; // Estandarizado
+                    DateTime dFechaFin = Dtp_Filtro_Rango_Fecha_Fin.Value.Date; // Estandarizado
+
+                    string sOrden = "mov.Cmp_Fecha_Movimiento DESC"; // Estandarizado
+                    if (Rdb_Filtro_Menos_Recientes.Checked) sOrden = "mov.Cmp_Fecha_Movimiento ASC"; // Estandarizado
+                    else if (Rdb_Filtro_Valor_Mas_Alto.Checked) sOrden = "ValorTotal DESC"; // Estandarizado
+                    else if (Rdb_Filtro_Valor_Mas_Bajo.Checked) sOrden = "ValorTotal ASC"; // Estandarizado
+
+                    // Llama al controlador. 
+                    dtResultado = controlador.Ctr_ObtenerHistorico( // Estandarizado
+                        sTipoMovimiento, iIdAlmacen, iIdEstado,
+                        bUsarRango, dFechaInicio, dFechaFin, sOrden
                     );
                 }
 
                 // Muestra los resultados en el DGV
                 Dgv_Vista_Inventarios_Pasados.DataSource = null;
-                Dgv_Vista_Inventarios_Pasados.DataSource = dt;
+                Dgv_Vista_Inventarios_Pasados.DataSource = dtResultado; // Estandarizado
 
-                if (dt != null && dt.Rows.Count == 0)
+                if (dtResultado != null && dtResultado.Rows.Count == 0) // Estandarizado
                 {
                     MessageBox.Show("No se encontraron resultados para esta búsqueda.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -261,15 +257,14 @@ namespace Capa_Vista_Inventario
 
         // ==================== Stevens Cambranes 05/11/2025 ====================
         // ==================== Cargar ComboBox Tipo Movimiento ====================
-        // (Obtiene los tipos de movimiento de la BD y los carga en el ComboBox)
         private void CargarComboBoxTiposMovimiento()
         {
             try
             {
-                DataTable dt = controlador.Ctr_CargarTiposMovimiento();
-                Cbo_Tipo_Operacion.DataSource = dt;
-                Cbo_Tipo_Operacion.DisplayMember = "Cmp_Nombre"; // Usa el alias 'Cmp_Nombre'
-                Cbo_Tipo_Operacion.ValueMember = "Pk_ID_TipoMovimiento"; // Usa el alias 'Pk_ID...'
+                DataTable dtResultado = controlador.Ctr_CargarTiposMovimiento(); // Estandarizado
+                Cbo_Tipo_Operacion.DataSource = dtResultado; // Estandarizado
+                Cbo_Tipo_Operacion.DisplayMember = "Cmp_Nombre";
+                Cbo_Tipo_Operacion.ValueMember = "Pk_ID_TipoMovimiento";
             }
             catch (Exception ex)
             {
@@ -279,14 +274,13 @@ namespace Capa_Vista_Inventario
 
         // ==================== Stevens Cambranes 05/11/2025 ====================
         // ==================== Cargar DGV por Defecto ====================
-        // (Carga los 100 movimientos más recientes en el DGV al abrir)
         private void CargarGridPorDefecto()
         {
             try
             {
-                DataTable dt = controlador.Ctr_CargarHistoricoDefault();
+                DataTable dtResultado = controlador.Ctr_CargarHistoricoDefault(); // Estandarizado
                 Dgv_Vista_Inventarios_Pasados.DataSource = null;
-                Dgv_Vista_Inventarios_Pasados.DataSource = dt;
+                Dgv_Vista_Inventarios_Pasados.DataSource = dtResultado; // Estandarizado
             }
             catch (Exception ex)
             {
@@ -296,7 +290,6 @@ namespace Capa_Vista_Inventario
 
         // ==================== Stevens Cambranes 05/11/2025 ====================
         // ==================== Evento Load del Formulario ====================
-        // (Se ejecuta una sola vez cuando el formulario carga)
         private void Frm_Inventario_Historico_Load(object sender, EventArgs e)
         {
             try
@@ -329,15 +322,14 @@ namespace Capa_Vista_Inventario
 
         // ==================== Stevens Cambranes 05/11/2025 ====================
         // ==================== Cargar ComboBox Almacenes ====================
-        // (Obtiene los almacenes de la BD y los carga en el ComboBox)
         private void CargarComboBoxAlmacenes()
         {
             try
             {
-                DataTable dt = controlador.Ctr_CargarAlmacenes();
-                Cbo_Filtro_Almacen.DataSource = dt;
-                Cbo_Filtro_Almacen.DisplayMember = "Cmp_Nombre"; // Usa el alias 'Cmp_Nombre'
-                Cbo_Filtro_Almacen.ValueMember = "Pk_ID_Almacen"; // Usa el alias 'Pk_ID...'
+                DataTable dtResultado = controlador.Ctr_CargarAlmacenes(); // Estandarizado
+                Cbo_Filtro_Almacen.DataSource = dtResultado; // Estandarizado
+                Cbo_Filtro_Almacen.DisplayMember = "Cmp_Nombre";
+                Cbo_Filtro_Almacen.ValueMember = "Pk_ID_Almacen";
             }
             catch (Exception ex)
             {
@@ -347,15 +339,14 @@ namespace Capa_Vista_Inventario
 
         // ==================== Stevens Cambranes 05/11/2025 ====================
         // ==================== Cargar ComboBox Estados ====================
-        // (Obtiene los estados de producto de la BD y los carga en el ComboBox)
         private void CargarComboBoxEstados()
         {
             try
             {
-                DataTable dt = controlador.Ctr_CargarEstadosProducto();
-                Cbo_Filtro_Estado.DataSource = dt;
-                Cbo_Filtro_Estado.DisplayMember = "Cmp_Nombre"; // Usa 'Cmp_Nombre'
-                Cbo_Filtro_Estado.ValueMember = "Pk_ID_EstadoProducto"; // Usa 'Pk_ID_EstadoProducto'
+                DataTable dtResultado = controlador.Ctr_CargarEstadosProducto(); // Estandarizado
+                Cbo_Filtro_Estado.DataSource = dtResultado; // Estandarizado
+                Cbo_Filtro_Estado.DisplayMember = "Cmp_Nombre";
+                Cbo_Filtro_Estado.ValueMember = "Pk_ID_EstadoProducto";
             }
             catch (Exception ex)
             {
@@ -365,18 +356,18 @@ namespace Capa_Vista_Inventario
 
         // ==================== Stevens Cambranes 05/11/2025 ====================
         // ==================== Control de Modos de Búsqueda (RadioButtons) ====================
-        // (Este único método controla AMBOS RadioButtons: Rdb_Ver_Historicos y Rdb_Usar_Filtros)
         private void ModoDeBusqueda_CheckedChanged(object sender, EventArgs e)
         {
             // Verifica si el modo "Ver Cierres" está activo
-            bool verCierres = Rdb_Ver_Historicos.Checked;
+            bool bVerCierres = Rdb_Ver_Historicos.Checked; // Estandarizado
 
             // Habilita o deshabilita los filtros basado en el modo
-            Cbo_Tipo_Operacion.Enabled = !verCierres;
-            Gpb_Filtros.Enabled = !verCierres; // Tu GroupBox de filtros
+            Cbo_Tipo_Operacion.Enabled = !bVerCierres; // Estandarizado
+            // Asumiendo que 'Gpb_Filtros' es el GroupBox
+            // Gpb_Filtros.Enabled = !bVerCierres; 
 
             // Si se activa "Ver Cierres", limpia el ComboBox de movimientos
-            if (verCierres)
+            if (bVerCierres) // Estandarizado
             {
                 Cbo_Tipo_Operacion.SelectedIndex = -1;
             }
