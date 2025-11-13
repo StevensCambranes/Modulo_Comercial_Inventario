@@ -29,7 +29,7 @@ namespace Capa_Vista_Inventario
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Pnl_Principal = new System.Windows.Forms.Panel();
             this.Lbl_Cod_Producto = new System.Windows.Forms.Label();
             this.Txt_Codigo_Producto = new System.Windows.Forms.TextBox();
@@ -107,7 +107,7 @@ namespace Capa_Vista_Inventario
             this.Lbl_Cod_Producto.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Cod_Producto.Location = new System.Drawing.Point(9, 105);
             this.Lbl_Cod_Producto.Name = "Lbl_Cod_Producto";
-            this.Lbl_Cod_Producto.Size = new System.Drawing.Size(155, 17);
+            this.Lbl_Cod_Producto.Size = new System.Drawing.Size(195, 21);
             this.Lbl_Cod_Producto.TabIndex = 34;
             this.Lbl_Cod_Producto.Text = "Codigo del Producto";
             // 
@@ -118,7 +118,7 @@ namespace Capa_Vista_Inventario
             this.Txt_Codigo_Producto.MaxLength = 20;
             this.Txt_Codigo_Producto.Name = "Txt_Codigo_Producto";
             this.Txt_Codigo_Producto.ReadOnly = true;
-            this.Txt_Codigo_Producto.Size = new System.Drawing.Size(113, 25);
+            this.Txt_Codigo_Producto.Size = new System.Drawing.Size(113, 30);
             this.Txt_Codigo_Producto.TabIndex = 34;
             // 
             // Lbl_Productos_Hotel
@@ -127,7 +127,7 @@ namespace Capa_Vista_Inventario
             this.Lbl_Productos_Hotel.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Productos_Hotel.Location = new System.Drawing.Point(3, 3);
             this.Lbl_Productos_Hotel.Name = "Lbl_Productos_Hotel";
-            this.Lbl_Productos_Hotel.Size = new System.Drawing.Size(235, 29);
+            this.Lbl_Productos_Hotel.Size = new System.Drawing.Size(296, 38);
             this.Lbl_Productos_Hotel.TabIndex = 5;
             this.Lbl_Productos_Hotel.Text = "Productos de Hotel";
             // 
@@ -175,7 +175,7 @@ namespace Capa_Vista_Inventario
             this.Lbl_Descripcion_Producto.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Descripcion_Producto.Location = new System.Drawing.Point(719, 22);
             this.Lbl_Descripcion_Producto.Name = "Lbl_Descripcion_Producto";
-            this.Lbl_Descripcion_Producto.Size = new System.Drawing.Size(94, 17);
+            this.Lbl_Descripcion_Producto.Size = new System.Drawing.Size(118, 21);
             this.Lbl_Descripcion_Producto.TabIndex = 33;
             this.Lbl_Descripcion_Producto.Text = "Descripcion";
             // 
@@ -187,7 +187,7 @@ namespace Capa_Vista_Inventario
             this.Txt_Descripcion_Producto.Location = new System.Drawing.Point(722, 50);
             this.Txt_Descripcion_Producto.MaxLength = 255;
             this.Txt_Descripcion_Producto.Name = "Txt_Descripcion_Producto";
-            this.Txt_Descripcion_Producto.Size = new System.Drawing.Size(291, 25);
+            this.Txt_Descripcion_Producto.Size = new System.Drawing.Size(291, 30);
             this.Txt_Descripcion_Producto.TabIndex = 32;
             // 
             // Txt_Existencias_Minimas_Producto
@@ -196,7 +196,7 @@ namespace Capa_Vista_Inventario
             this.Txt_Existencias_Minimas_Producto.Location = new System.Drawing.Point(571, 81);
             this.Txt_Existencias_Minimas_Producto.MaxLength = 10;
             this.Txt_Existencias_Minimas_Producto.Name = "Txt_Existencias_Minimas_Producto";
-            this.Txt_Existencias_Minimas_Producto.Size = new System.Drawing.Size(141, 25);
+            this.Txt_Existencias_Minimas_Producto.Size = new System.Drawing.Size(141, 30);
             this.Txt_Existencias_Minimas_Producto.TabIndex = 31;
             // 
             // Lbl_Existencias_Minimas_Producto
@@ -205,7 +205,7 @@ namespace Capa_Vista_Inventario
             this.Lbl_Existencias_Minimas_Producto.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Existencias_Minimas_Producto.Location = new System.Drawing.Point(399, 84);
             this.Lbl_Existencias_Minimas_Producto.Name = "Lbl_Existencias_Minimas_Producto";
-            this.Lbl_Existencias_Minimas_Producto.Size = new System.Drawing.Size(152, 17);
+            this.Lbl_Existencias_Minimas_Producto.Size = new System.Drawing.Size(190, 21);
             this.Lbl_Existencias_Minimas_Producto.TabIndex = 30;
             this.Lbl_Existencias_Minimas_Producto.Text = "Existencias Minimas";
             // 
@@ -215,7 +215,7 @@ namespace Capa_Vista_Inventario
             this.Cbo_Almacen_Producto.FormattingEnabled = true;
             this.Cbo_Almacen_Producto.Location = new System.Drawing.Point(571, 112);
             this.Cbo_Almacen_Producto.Name = "Cbo_Almacen_Producto";
-            this.Cbo_Almacen_Producto.Size = new System.Drawing.Size(142, 25);
+            this.Cbo_Almacen_Producto.Size = new System.Drawing.Size(142, 29);
             this.Cbo_Almacen_Producto.TabIndex = 29;
             // 
             // Lbl_Almacen_Producto
@@ -224,7 +224,7 @@ namespace Capa_Vista_Inventario
             this.Lbl_Almacen_Producto.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Almacen_Producto.Location = new System.Drawing.Point(400, 115);
             this.Lbl_Almacen_Producto.Name = "Lbl_Almacen_Producto";
-            this.Lbl_Almacen_Producto.Size = new System.Drawing.Size(165, 17);
+            this.Lbl_Almacen_Producto.Size = new System.Drawing.Size(206, 21);
             this.Lbl_Almacen_Producto.TabIndex = 28;
             this.Lbl_Almacen_Producto.Text = "Almacen del Producto";
             // 
@@ -234,7 +234,7 @@ namespace Capa_Vista_Inventario
             this.Txt_Existencias_Maximas_Producto.Location = new System.Drawing.Point(571, 50);
             this.Txt_Existencias_Maximas_Producto.MaxLength = 10;
             this.Txt_Existencias_Maximas_Producto.Name = "Txt_Existencias_Maximas_Producto";
-            this.Txt_Existencias_Maximas_Producto.Size = new System.Drawing.Size(141, 25);
+            this.Txt_Existencias_Maximas_Producto.Size = new System.Drawing.Size(141, 30);
             this.Txt_Existencias_Maximas_Producto.TabIndex = 27;
             // 
             // Lbl_Existencias_Maximas_Producto
@@ -243,7 +243,7 @@ namespace Capa_Vista_Inventario
             this.Lbl_Existencias_Maximas_Producto.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Existencias_Maximas_Producto.Location = new System.Drawing.Point(400, 53);
             this.Lbl_Existencias_Maximas_Producto.Name = "Lbl_Existencias_Maximas_Producto";
-            this.Lbl_Existencias_Maximas_Producto.Size = new System.Drawing.Size(154, 17);
+            this.Lbl_Existencias_Maximas_Producto.Size = new System.Drawing.Size(193, 21);
             this.Lbl_Existencias_Maximas_Producto.TabIndex = 26;
             this.Lbl_Existencias_Maximas_Producto.Text = "Existencias Maximas";
             // 
@@ -253,7 +253,7 @@ namespace Capa_Vista_Inventario
             this.Lbl_Precio_Venta_Producto.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Precio_Venta_Producto.Location = new System.Drawing.Point(6, 178);
             this.Lbl_Precio_Venta_Producto.Name = "Lbl_Precio_Venta_Producto";
-            this.Lbl_Precio_Venta_Producto.Size = new System.Drawing.Size(100, 17);
+            this.Lbl_Precio_Venta_Producto.Size = new System.Drawing.Size(123, 21);
             this.Lbl_Precio_Venta_Producto.TabIndex = 23;
             this.Lbl_Precio_Venta_Producto.Text = "Precio Venta";
             // 
@@ -263,7 +263,7 @@ namespace Capa_Vista_Inventario
             this.Txt_Precio_Venta_Producto.Location = new System.Drawing.Point(127, 175);
             this.Txt_Precio_Venta_Producto.MaxLength = 10;
             this.Txt_Precio_Venta_Producto.Name = "Txt_Precio_Venta_Producto";
-            this.Txt_Precio_Venta_Producto.Size = new System.Drawing.Size(147, 25);
+            this.Txt_Precio_Venta_Producto.Size = new System.Drawing.Size(147, 30);
             this.Txt_Precio_Venta_Producto.TabIndex = 22;
             // 
             // Lbl_Marca_Producto
@@ -272,7 +272,7 @@ namespace Capa_Vista_Inventario
             this.Lbl_Marca_Producto.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Marca_Producto.Location = new System.Drawing.Point(6, 53);
             this.Lbl_Marca_Producto.Name = "Lbl_Marca_Producto";
-            this.Lbl_Marca_Producto.Size = new System.Drawing.Size(51, 17);
+            this.Lbl_Marca_Producto.Size = new System.Drawing.Size(65, 21);
             this.Lbl_Marca_Producto.TabIndex = 21;
             this.Lbl_Marca_Producto.Text = "Marca";
             // 
@@ -282,7 +282,7 @@ namespace Capa_Vista_Inventario
             this.Txt_Marca_Producto.Location = new System.Drawing.Point(127, 50);
             this.Txt_Marca_Producto.MaxLength = 20;
             this.Txt_Marca_Producto.Name = "Txt_Marca_Producto";
-            this.Txt_Marca_Producto.Size = new System.Drawing.Size(220, 25);
+            this.Txt_Marca_Producto.Size = new System.Drawing.Size(220, 30);
             this.Txt_Marca_Producto.TabIndex = 20;
             // 
             // Dtp_Fecha_Vencimiento_Producto
@@ -291,7 +291,7 @@ namespace Capa_Vista_Inventario
             this.Dtp_Fecha_Vencimiento_Producto.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_Fecha_Vencimiento_Producto.Location = new System.Drawing.Point(570, 174);
             this.Dtp_Fecha_Vencimiento_Producto.Name = "Dtp_Fecha_Vencimiento_Producto";
-            this.Dtp_Fecha_Vencimiento_Producto.Size = new System.Drawing.Size(142, 25);
+            this.Dtp_Fecha_Vencimiento_Producto.Size = new System.Drawing.Size(142, 30);
             this.Dtp_Fecha_Vencimiento_Producto.TabIndex = 19;
             this.Dtp_Fecha_Vencimiento_Producto.Value = new System.DateTime(2025, 10, 26, 0, 0, 0, 0);
             // 
@@ -301,7 +301,7 @@ namespace Capa_Vista_Inventario
             this.Lbl_Fecha_Vencimiento.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Fecha_Vencimiento.Location = new System.Drawing.Point(400, 180);
             this.Lbl_Fecha_Vencimiento.Name = "Lbl_Fecha_Vencimiento";
-            this.Lbl_Fecha_Vencimiento.Size = new System.Drawing.Size(146, 17);
+            this.Lbl_Fecha_Vencimiento.Size = new System.Drawing.Size(179, 21);
             this.Lbl_Fecha_Vencimiento.TabIndex = 18;
             this.Lbl_Fecha_Vencimiento.Text = "Fecha Vencimiento";
             // 
@@ -311,7 +311,7 @@ namespace Capa_Vista_Inventario
             this.Lbl_Fecha_Ingreso.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Fecha_Ingreso.Location = new System.Drawing.Point(400, 149);
             this.Lbl_Fecha_Ingreso.Name = "Lbl_Fecha_Ingreso";
-            this.Lbl_Fecha_Ingreso.Size = new System.Drawing.Size(108, 17);
+            this.Lbl_Fecha_Ingreso.Size = new System.Drawing.Size(135, 21);
             this.Lbl_Fecha_Ingreso.TabIndex = 17;
             this.Lbl_Fecha_Ingreso.Text = "Fecha Ingreso";
             // 
@@ -321,7 +321,7 @@ namespace Capa_Vista_Inventario
             this.Dtp_Fecha_Ingreso_Producto.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_Fecha_Ingreso_Producto.Location = new System.Drawing.Point(570, 143);
             this.Dtp_Fecha_Ingreso_Producto.Name = "Dtp_Fecha_Ingreso_Producto";
-            this.Dtp_Fecha_Ingreso_Producto.Size = new System.Drawing.Size(142, 25);
+            this.Dtp_Fecha_Ingreso_Producto.Size = new System.Drawing.Size(142, 30);
             this.Dtp_Fecha_Ingreso_Producto.TabIndex = 16;
             this.Dtp_Fecha_Ingreso_Producto.Value = new System.DateTime(2025, 10, 26, 0, 0, 0, 0);
             // 
@@ -331,7 +331,7 @@ namespace Capa_Vista_Inventario
             this.Cbo_Unidad_Medida_Producto.FormattingEnabled = true;
             this.Cbo_Unidad_Medida_Producto.Location = new System.Drawing.Point(127, 81);
             this.Cbo_Unidad_Medida_Producto.Name = "Cbo_Unidad_Medida_Producto";
-            this.Cbo_Unidad_Medida_Producto.Size = new System.Drawing.Size(147, 25);
+            this.Cbo_Unidad_Medida_Producto.Size = new System.Drawing.Size(147, 29);
             this.Cbo_Unidad_Medida_Producto.TabIndex = 13;
             // 
             // Cbo_Estado_Producto
@@ -340,7 +340,7 @@ namespace Capa_Vista_Inventario
             this.Cbo_Estado_Producto.FormattingEnabled = true;
             this.Cbo_Estado_Producto.Location = new System.Drawing.Point(571, 18);
             this.Cbo_Estado_Producto.Name = "Cbo_Estado_Producto";
-            this.Cbo_Estado_Producto.Size = new System.Drawing.Size(142, 25);
+            this.Cbo_Estado_Producto.Size = new System.Drawing.Size(142, 29);
             this.Cbo_Estado_Producto.TabIndex = 12;
             // 
             // Lbl_Estado_Producto
@@ -349,7 +349,7 @@ namespace Capa_Vista_Inventario
             this.Lbl_Estado_Producto.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Estado_Producto.Location = new System.Drawing.Point(400, 22);
             this.Lbl_Estado_Producto.Name = "Lbl_Estado_Producto";
-            this.Lbl_Estado_Producto.Size = new System.Drawing.Size(150, 17);
+            this.Lbl_Estado_Producto.Size = new System.Drawing.Size(189, 21);
             this.Lbl_Estado_Producto.TabIndex = 11;
             this.Lbl_Estado_Producto.Text = "Estado del Producto";
             // 
@@ -359,7 +359,7 @@ namespace Capa_Vista_Inventario
             this.Lbl_Unidad_Medida_Producto.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Unidad_Medida_Producto.Location = new System.Drawing.Point(6, 84);
             this.Lbl_Unidad_Medida_Producto.Name = "Lbl_Unidad_Medida_Producto";
-            this.Lbl_Unidad_Medida_Producto.Size = new System.Drawing.Size(115, 17);
+            this.Lbl_Unidad_Medida_Producto.Size = new System.Drawing.Size(147, 21);
             this.Lbl_Unidad_Medida_Producto.TabIndex = 9;
             this.Lbl_Unidad_Medida_Producto.Text = "Unidad Medida";
             // 
@@ -369,7 +369,7 @@ namespace Capa_Vista_Inventario
             this.Lbl_Cantidad_Producto.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Cantidad_Producto.Location = new System.Drawing.Point(6, 115);
             this.Lbl_Cantidad_Producto.Name = "Lbl_Cantidad_Producto";
-            this.Lbl_Cantidad_Producto.Size = new System.Drawing.Size(72, 17);
+            this.Lbl_Cantidad_Producto.Size = new System.Drawing.Size(91, 21);
             this.Lbl_Cantidad_Producto.TabIndex = 7;
             this.Lbl_Cantidad_Producto.Text = "Cantidad";
             // 
@@ -379,7 +379,7 @@ namespace Capa_Vista_Inventario
             this.Txt_Cantidad_Producto.Location = new System.Drawing.Point(127, 113);
             this.Txt_Cantidad_Producto.MaxLength = 5;
             this.Txt_Cantidad_Producto.Name = "Txt_Cantidad_Producto";
-            this.Txt_Cantidad_Producto.Size = new System.Drawing.Size(147, 25);
+            this.Txt_Cantidad_Producto.Size = new System.Drawing.Size(147, 30);
             this.Txt_Cantidad_Producto.TabIndex = 6;
             // 
             // Lbl_Precio_Unitario_Producto
@@ -388,7 +388,7 @@ namespace Capa_Vista_Inventario
             this.Lbl_Precio_Unitario_Producto.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Precio_Unitario_Producto.Location = new System.Drawing.Point(6, 147);
             this.Lbl_Precio_Unitario_Producto.Name = "Lbl_Precio_Unitario_Producto";
-            this.Lbl_Precio_Unitario_Producto.Size = new System.Drawing.Size(110, 17);
+            this.Lbl_Precio_Unitario_Producto.Size = new System.Drawing.Size(137, 21);
             this.Lbl_Precio_Unitario_Producto.TabIndex = 5;
             this.Lbl_Precio_Unitario_Producto.Text = "Costo Unitario";
             // 
@@ -398,7 +398,7 @@ namespace Capa_Vista_Inventario
             this.Txt_Costo_Unitario_Producto.Location = new System.Drawing.Point(127, 144);
             this.Txt_Costo_Unitario_Producto.MaxLength = 10;
             this.Txt_Costo_Unitario_Producto.Name = "Txt_Costo_Unitario_Producto";
-            this.Txt_Costo_Unitario_Producto.Size = new System.Drawing.Size(147, 25);
+            this.Txt_Costo_Unitario_Producto.Size = new System.Drawing.Size(147, 30);
             this.Txt_Costo_Unitario_Producto.TabIndex = 4;
             // 
             // Lbl_Nombre_Producto
@@ -407,7 +407,7 @@ namespace Capa_Vista_Inventario
             this.Lbl_Nombre_Producto.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Nombre_Producto.Location = new System.Drawing.Point(6, 21);
             this.Lbl_Nombre_Producto.Name = "Lbl_Nombre_Producto";
-            this.Lbl_Nombre_Producto.Size = new System.Drawing.Size(66, 17);
+            this.Lbl_Nombre_Producto.Size = new System.Drawing.Size(82, 21);
             this.Lbl_Nombre_Producto.TabIndex = 2;
             this.Lbl_Nombre_Producto.Text = "Nombre";
             // 
@@ -417,7 +417,7 @@ namespace Capa_Vista_Inventario
             this.Txt_Nombre_Producto.Location = new System.Drawing.Point(127, 19);
             this.Txt_Nombre_Producto.MaxLength = 30;
             this.Txt_Nombre_Producto.Name = "Txt_Nombre_Producto";
-            this.Txt_Nombre_Producto.Size = new System.Drawing.Size(267, 25);
+            this.Txt_Nombre_Producto.Size = new System.Drawing.Size(267, 30);
             this.Txt_Nombre_Producto.TabIndex = 3;
             // 
             // Gpb_Gestion_Inventario
@@ -457,6 +457,7 @@ namespace Capa_Vista_Inventario
             // 
             // Btn_Modificar_Producto
             // 
+            this.Btn_Modificar_Producto.Enabled = false;
             this.Btn_Modificar_Producto.Location = new System.Drawing.Point(266, 18);
             this.Btn_Modificar_Producto.Name = "Btn_Modificar_Producto";
             this.Btn_Modificar_Producto.Size = new System.Drawing.Size(94, 30);
@@ -498,7 +499,7 @@ namespace Capa_Vista_Inventario
             this.Rdb_Ropa_Blanca_Lenceria.AutoSize = true;
             this.Rdb_Ropa_Blanca_Lenceria.Location = new System.Drawing.Point(239, 50);
             this.Rdb_Ropa_Blanca_Lenceria.Name = "Rdb_Ropa_Blanca_Lenceria";
-            this.Rdb_Ropa_Blanca_Lenceria.Size = new System.Drawing.Size(201, 22);
+            this.Rdb_Ropa_Blanca_Lenceria.Size = new System.Drawing.Size(254, 27);
             this.Rdb_Ropa_Blanca_Lenceria.TabIndex = 8;
             this.Rdb_Ropa_Blanca_Lenceria.TabStop = true;
             this.Rdb_Ropa_Blanca_Lenceria.Text = "Ropa Blanca y Lencería";
@@ -509,7 +510,7 @@ namespace Capa_Vista_Inventario
             this.Rdb_Producto_Cortesia.AutoSize = true;
             this.Rdb_Producto_Cortesia.Location = new System.Drawing.Point(239, 22);
             this.Rdb_Producto_Cortesia.Name = "Rdb_Producto_Cortesia";
-            this.Rdb_Producto_Cortesia.Size = new System.Drawing.Size(90, 22);
+            this.Rdb_Producto_Cortesia.Size = new System.Drawing.Size(112, 27);
             this.Rdb_Producto_Cortesia.TabIndex = 7;
             this.Rdb_Producto_Cortesia.TabStop = true;
             this.Rdb_Producto_Cortesia.Text = "Cortesía";
@@ -520,7 +521,7 @@ namespace Capa_Vista_Inventario
             this.Rdb_Producto_Seguridad_Emergencia.AutoSize = true;
             this.Rdb_Producto_Seguridad_Emergencia.Location = new System.Drawing.Point(239, 103);
             this.Rdb_Producto_Seguridad_Emergencia.Name = "Rdb_Producto_Seguridad_Emergencia";
-            this.Rdb_Producto_Seguridad_Emergencia.Size = new System.Drawing.Size(207, 22);
+            this.Rdb_Producto_Seguridad_Emergencia.Size = new System.Drawing.Size(264, 27);
             this.Rdb_Producto_Seguridad_Emergencia.TabIndex = 6;
             this.Rdb_Producto_Seguridad_Emergencia.TabStop = true;
             this.Rdb_Producto_Seguridad_Emergencia.Text = "Seguridad y Emergencia";
@@ -531,7 +532,7 @@ namespace Capa_Vista_Inventario
             this.Rdb_Producto_Suministros_Oficina.AutoSize = true;
             this.Rdb_Producto_Suministros_Oficina.Location = new System.Drawing.Point(6, 78);
             this.Rdb_Producto_Suministros_Oficina.Name = "Rdb_Producto_Suministros_Oficina";
-            this.Rdb_Producto_Suministros_Oficina.Size = new System.Drawing.Size(194, 22);
+            this.Rdb_Producto_Suministros_Oficina.Size = new System.Drawing.Size(249, 27);
             this.Rdb_Producto_Suministros_Oficina.TabIndex = 5;
             this.Rdb_Producto_Suministros_Oficina.TabStop = true;
             this.Rdb_Producto_Suministros_Oficina.Text = "Suministros de Oficina";
@@ -542,7 +543,7 @@ namespace Capa_Vista_Inventario
             this.Rdb_Producto_Mobiliario_Equipo.AutoSize = true;
             this.Rdb_Producto_Mobiliario_Equipo.Location = new System.Drawing.Point(239, 78);
             this.Rdb_Producto_Mobiliario_Equipo.Name = "Rdb_Producto_Mobiliario_Equipo";
-            this.Rdb_Producto_Mobiliario_Equipo.Size = new System.Drawing.Size(173, 22);
+            this.Rdb_Producto_Mobiliario_Equipo.Size = new System.Drawing.Size(221, 27);
             this.Rdb_Producto_Mobiliario_Equipo.TabIndex = 4;
             this.Rdb_Producto_Mobiliario_Equipo.TabStop = true;
             this.Rdb_Producto_Mobiliario_Equipo.Text = "Mobiliario y Equipo";
@@ -553,7 +554,7 @@ namespace Capa_Vista_Inventario
             this.Rdb_Producto_Equipos_Cocina.AutoSize = true;
             this.Rdb_Producto_Equipos_Cocina.Location = new System.Drawing.Point(6, 50);
             this.Rdb_Producto_Equipos_Cocina.Name = "Rdb_Producto_Equipos_Cocina";
-            this.Rdb_Producto_Equipos_Cocina.Size = new System.Drawing.Size(163, 22);
+            this.Rdb_Producto_Equipos_Cocina.Size = new System.Drawing.Size(208, 27);
             this.Rdb_Producto_Equipos_Cocina.TabIndex = 3;
             this.Rdb_Producto_Equipos_Cocina.TabStop = true;
             this.Rdb_Producto_Equipos_Cocina.Text = "Equipos de Cocina";
@@ -564,7 +565,7 @@ namespace Capa_Vista_Inventario
             this.Rdb_Producto_Alimentos_Bebidas.AutoSize = true;
             this.Rdb_Producto_Alimentos_Bebidas.Location = new System.Drawing.Point(6, 103);
             this.Rdb_Producto_Alimentos_Bebidas.Name = "Rdb_Producto_Alimentos_Bebidas";
-            this.Rdb_Producto_Alimentos_Bebidas.Size = new System.Drawing.Size(177, 22);
+            this.Rdb_Producto_Alimentos_Bebidas.Size = new System.Drawing.Size(225, 27);
             this.Rdb_Producto_Alimentos_Bebidas.TabIndex = 2;
             this.Rdb_Producto_Alimentos_Bebidas.TabStop = true;
             this.Rdb_Producto_Alimentos_Bebidas.Text = "Alimentos y Bebidas";
@@ -575,7 +576,7 @@ namespace Capa_Vista_Inventario
             this.Rdb_Producto_Limpieza_Mantenimiento.AutoSize = true;
             this.Rdb_Producto_Limpieza_Mantenimiento.Location = new System.Drawing.Point(6, 22);
             this.Rdb_Producto_Limpieza_Mantenimiento.Name = "Rdb_Producto_Limpieza_Mantenimiento";
-            this.Rdb_Producto_Limpieza_Mantenimiento.Size = new System.Drawing.Size(227, 22);
+            this.Rdb_Producto_Limpieza_Mantenimiento.Size = new System.Drawing.Size(288, 27);
             this.Rdb_Producto_Limpieza_Mantenimiento.TabIndex = 0;
             this.Rdb_Producto_Limpieza_Mantenimiento.TabStop = true;
             this.Rdb_Producto_Limpieza_Mantenimiento.Text = "Limpieza y Mantenimiento";
@@ -600,14 +601,14 @@ namespace Capa_Vista_Inventario
             this.Dgv_Vista_Producto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Dgv_Vista_Producto.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Dgv_Vista_Producto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_Vista_Producto.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_Vista_Producto.DefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv_Vista_Producto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Dgv_Vista_Producto.Location = new System.Drawing.Point(0, 0);
             this.Dgv_Vista_Producto.MultiSelect = false;
@@ -620,7 +621,7 @@ namespace Capa_Vista_Inventario
             // 
             // Frm_Inventario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1069, 761);
