@@ -1,4 +1,5 @@
-﻿using System;
+﻿// ==================== Stevens Cambranes 12/11/2025 ====================
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,29 +12,17 @@ namespace Capa_Modelo_Inventario
     {
         public OdbcConnection conexion()
         {
-            //creacion de la conexion via ODBC
-            OdbcConnection conn = new OdbcConnection("Dsn=Bd_hoteleria");
+            // La cadena de conexión debe ser movida a Web.config o App.config
+            OdbcConnection conn = new OdbcConnection("Dsn=bd_hoteleria");
             try
             {
                 conn.Open();
+                return conn;
             }
-            catch (OdbcException)
+            catch (OdbcException ex)
             {
-                Console.WriteLine("No Conectó");
-            }
-            return conn;
-        }
-
-        //metodo para cerrar la conexion
-        public void desconexion(OdbcConnection conn)
-        {
-            try
-            {
-                conn.Close();
-            }
-            catch (OdbcException)
-            {
-                Console.WriteLine("No Conectó");
+                // para que la Capa Modelo sepa que falló la conexión.
+                throw new Exception("Error al conectar con la base de datos ODBC (DSN=bd_hoteleria).", ex);
             }
         }
     }

@@ -314,6 +314,7 @@ namespace Capa_Vista_Inventario
             // Rdb_Filtro_Estado
             // 
             this.Rdb_Filtro_Estado.AutoSize = true;
+            this.Rdb_Filtro_Estado.Enabled = false;
             this.Rdb_Filtro_Estado.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Rdb_Filtro_Estado.Location = new System.Drawing.Point(245, 55);
             this.Rdb_Filtro_Estado.Name = "Rdb_Filtro_Estado";
