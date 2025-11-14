@@ -106,16 +106,16 @@ namespace Capa_Vista_Comercial
         public void fun_habilitar_botones_por_permisos_combinados(int iIdUsuario, int iIdPerfil)
         {
             // Diccionarios de idAplicacion -> submenú
-            Dictionary<int, ToolStripMenuItem> mapaCatalogos = new Dictionary<int, ToolStripMenuItem>
+            Dictionary<int, ToolStripMenuItem> mapaProcesos = new Dictionary<int, ToolStripMenuItem>
             {
-                {301, empleadosToolStripMenuItem1},
-                {302, usuariosToolStripMenuItem},
-                {303, perfilesToolStripMenuItem},
-                {304, modulosToolStripMenuItem},
-                {305, Btn_Aplicacion}
+                {4405, inventarioToolStripMenuItem},
+                {4404, cuentasPorCobrarToolStripMenuItem},
+                {4403, cuentasPorPagarToolStripMenuItem},
+                {4402, ventasFacturasToolStripMenuItem},
+                {4401, comprasToolStripMenuItem}
             };
 
-            Dictionary<int, ToolStripMenuItem> mapaProcesos = new Dictionary<int, ToolStripMenuItem>
+            Dictionary<int, ToolStripMenuItem> mapaCatalogos = new Dictionary<int, ToolStripMenuItem>
             {
                 {309, procesosToolStripMenuItem }
             };
@@ -155,7 +155,7 @@ namespace Capa_Vista_Comercial
             {
                 int idModulo = Convert.ToInt32(row["iFk_id_modulo"]);
                 int idAplicacion = Convert.ToInt32(row["iFk_id_aplicacion"]);
-                if (idModulo == 4 && idAplicacion >= 301 && idAplicacion <= 309)
+                if (idModulo == 9 && idAplicacion >= 4401 && idAplicacion <= 4405)
                 {
                     if (mapaCatalogos.ContainsKey(idAplicacion))
                         mapaCatalogos[idAplicacion].Enabled = true;
@@ -353,7 +353,7 @@ namespace Capa_Vista_Comercial
 
         private void inventarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // ====================
+            // Stevens Cambranes
             // Ir a inventario
             Frm_Inventario_Historico irInventario = new Frm_Inventario_Historico();
             irInventario.Show();
@@ -361,28 +361,28 @@ namespace Capa_Vista_Comercial
 
         private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Raul Compras
+            // Raul Ramirez
             Frm_Compras irCompras = new Frm_Compras();
             irCompras.Show();
         }
 
         private void cuentasPorPagarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Diego Frm_CxP_Gestiòn
-            Frm_CxP_Gestiòn irCxP = new Frm_CxP_Gestiòn();
+            // Diego Saquil
+            Frm_CxP_Gestion irCxP = new Frm_CxP_Gestion();
             irCxP.Show();
         }
 
         private void ventasFacturasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Juan Carlos
+            // Juan Carlos Sandoval
             Frm_Venta irVenta = new Frm_Venta();
             irVenta.Show();
         }
 
         private void cuentasPorCobrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Nelson recibos
+            // Nelson Godinez
             Frm_Recibos irCxC = new Frm_Recibos();
             irCxC.Show();
         }
