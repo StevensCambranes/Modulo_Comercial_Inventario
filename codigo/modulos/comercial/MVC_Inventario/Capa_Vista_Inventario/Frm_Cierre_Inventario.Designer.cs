@@ -45,13 +45,23 @@ namespace Capa_Vista_Inventario
             this.Btn_Cierre_Inventario = new System.Windows.Forms.Button();
             this.Btn_Cancelar_Cierre = new System.Windows.Forms.Button();
             this.Lbl_Nuevo_Saldo_Inicial = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Lbl_Abono_Acumulado = new System.Windows.Forms.Label();
+            this.Lbl_Cargos_Acumulados_Cierre = new System.Windows.Forms.Label();
+            this.Pnl_Rangos_Fechas_Cierre = new System.Windows.Forms.Panel();
+            this.Dtp_Fecha_Fin_Cierre = new System.Windows.Forms.DateTimePicker();
+            this.Dtp_Fecha_Inicio_Cierre = new System.Windows.Forms.DateTimePicker();
+            this.Lbl_Fecha_Inicio_Cierre = new System.Windows.Forms.Label();
+            this.Lbl_Fecha_Fin_Cierre = new System.Windows.Forms.Label();
+            this.Lbl_Rango_Cierre = new System.Windows.Forms.Label();
+            this.Lbl_Titulo_Cierre_Inventario = new System.Windows.Forms.Label();
             this.Pnl_Principal_Cierre.SuspendLayout();
+            this.Pnl_Rangos_Fechas_Cierre.SuspendLayout();
             this.SuspendLayout();
             // 
             // Pnl_Principal_Cierre
             // 
+            this.Pnl_Principal_Cierre.Controls.Add(this.Lbl_Titulo_Cierre_Inventario);
+            this.Pnl_Principal_Cierre.Controls.Add(this.Pnl_Rangos_Fechas_Cierre);
             this.Pnl_Principal_Cierre.Controls.Add(this.Lbl_Saldo_Final_Producto);
             this.Pnl_Principal_Cierre.Controls.Add(this.Lbl_Abono_Mes_Producto);
             this.Pnl_Principal_Cierre.Controls.Add(this.Lbl_Cargos_Acumulados);
@@ -67,20 +77,20 @@ namespace Capa_Vista_Inventario
             this.Pnl_Principal_Cierre.Controls.Add(this.Btn_Cierre_Inventario);
             this.Pnl_Principal_Cierre.Controls.Add(this.Btn_Cancelar_Cierre);
             this.Pnl_Principal_Cierre.Controls.Add(this.Lbl_Nuevo_Saldo_Inicial);
-            this.Pnl_Principal_Cierre.Controls.Add(this.label2);
-            this.Pnl_Principal_Cierre.Controls.Add(this.label1);
+            this.Pnl_Principal_Cierre.Controls.Add(this.Lbl_Abono_Acumulado);
+            this.Pnl_Principal_Cierre.Controls.Add(this.Lbl_Cargos_Acumulados_Cierre);
             this.Pnl_Principal_Cierre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pnl_Principal_Cierre.Location = new System.Drawing.Point(0, 0);
             this.Pnl_Principal_Cierre.Margin = new System.Windows.Forms.Padding(4);
             this.Pnl_Principal_Cierre.Name = "Pnl_Principal_Cierre";
-            this.Pnl_Principal_Cierre.Size = new System.Drawing.Size(634, 317);
+            this.Pnl_Principal_Cierre.Size = new System.Drawing.Size(634, 426);
             this.Pnl_Principal_Cierre.TabIndex = 0;
             // 
             // Lbl_Saldo_Final_Producto
             // 
             this.Lbl_Saldo_Final_Producto.AutoSize = true;
             this.Lbl_Saldo_Final_Producto.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Saldo_Final_Producto.Location = new System.Drawing.Point(6, 48);
+            this.Lbl_Saldo_Final_Producto.Location = new System.Drawing.Point(11, 202);
             this.Lbl_Saldo_Final_Producto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Saldo_Final_Producto.Name = "Lbl_Saldo_Final_Producto";
             this.Lbl_Saldo_Final_Producto.Size = new System.Drawing.Size(86, 17);
@@ -91,7 +101,7 @@ namespace Capa_Vista_Inventario
             // 
             this.Lbl_Abono_Mes_Producto.AutoSize = true;
             this.Lbl_Abono_Mes_Producto.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Abono_Mes_Producto.Location = new System.Drawing.Point(6, 78);
+            this.Lbl_Abono_Mes_Producto.Location = new System.Drawing.Point(11, 232);
             this.Lbl_Abono_Mes_Producto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Abono_Mes_Producto.Name = "Lbl_Abono_Mes_Producto";
             this.Lbl_Abono_Mes_Producto.Size = new System.Drawing.Size(115, 17);
@@ -102,7 +112,7 @@ namespace Capa_Vista_Inventario
             // 
             this.Lbl_Cargos_Acumulados.AutoSize = true;
             this.Lbl_Cargos_Acumulados.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Cargos_Acumulados.Location = new System.Drawing.Point(7, 140);
+            this.Lbl_Cargos_Acumulados.Location = new System.Drawing.Point(12, 294);
             this.Lbl_Cargos_Acumulados.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Cargos_Acumulados.Name = "Lbl_Cargos_Acumulados";
             this.Lbl_Cargos_Acumulados.Size = new System.Drawing.Size(149, 17);
@@ -113,7 +123,7 @@ namespace Capa_Vista_Inventario
             // 
             this.Lbl_Abonos_Acumulados.AutoSize = true;
             this.Lbl_Abonos_Acumulados.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Abonos_Acumulados.Location = new System.Drawing.Point(7, 109);
+            this.Lbl_Abonos_Acumulados.Location = new System.Drawing.Point(12, 263);
             this.Lbl_Abonos_Acumulados.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Abonos_Acumulados.Name = "Lbl_Abonos_Acumulados";
             this.Lbl_Abonos_Acumulados.Size = new System.Drawing.Size(153, 17);
@@ -124,7 +134,7 @@ namespace Capa_Vista_Inventario
             // 
             this.Lbl_Cargos_Mes_Producto.AutoSize = true;
             this.Lbl_Cargos_Mes_Producto.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Cargos_Mes_Producto.Location = new System.Drawing.Point(7, 171);
+            this.Lbl_Cargos_Mes_Producto.Location = new System.Drawing.Point(12, 325);
             this.Lbl_Cargos_Mes_Producto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Cargos_Mes_Producto.Name = "Lbl_Cargos_Mes_Producto";
             this.Lbl_Cargos_Mes_Producto.Size = new System.Drawing.Size(118, 17);
@@ -133,18 +143,18 @@ namespace Capa_Vista_Inventario
             // 
             // Txt_Saldo_Inicial_Producto
             // 
-            this.Txt_Saldo_Inicial_Producto.Location = new System.Drawing.Point(178, 16);
+            this.Txt_Saldo_Inicial_Producto.Location = new System.Drawing.Point(177, 170);
             this.Txt_Saldo_Inicial_Producto.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_Saldo_Inicial_Producto.MaxLength = 10;
             this.Txt_Saldo_Inicial_Producto.Name = "Txt_Saldo_Inicial_Producto";
-            this.Txt_Saldo_Inicial_Producto.Size = new System.Drawing.Size(143, 23);
+            this.Txt_Saldo_Inicial_Producto.Size = new System.Drawing.Size(162, 23);
             this.Txt_Saldo_Inicial_Producto.TabIndex = 34;
             // 
             // Lbl_Saldo_Inicial
             // 
             this.Lbl_Saldo_Inicial.AutoSize = true;
             this.Lbl_Saldo_Inicial.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Saldo_Inicial.Location = new System.Drawing.Point(6, 18);
+            this.Lbl_Saldo_Inicial.Location = new System.Drawing.Point(11, 172);
             this.Lbl_Saldo_Inicial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Saldo_Inicial.Name = "Lbl_Saldo_Inicial";
             this.Lbl_Saldo_Inicial.Size = new System.Drawing.Size(96, 17);
@@ -153,54 +163,54 @@ namespace Capa_Vista_Inventario
             // 
             // Txt_Saldo_Final
             // 
-            this.Txt_Saldo_Final.Location = new System.Drawing.Point(178, 46);
+            this.Txt_Saldo_Final.Location = new System.Drawing.Point(177, 200);
             this.Txt_Saldo_Final.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_Saldo_Final.MaxLength = 5;
             this.Txt_Saldo_Final.Name = "Txt_Saldo_Final";
-            this.Txt_Saldo_Final.Size = new System.Drawing.Size(143, 23);
+            this.Txt_Saldo_Final.Size = new System.Drawing.Size(162, 23);
             this.Txt_Saldo_Final.TabIndex = 40;
             // 
             // Txt_Abono_Mes
             // 
-            this.Txt_Abono_Mes.Location = new System.Drawing.Point(178, 76);
+            this.Txt_Abono_Mes.Location = new System.Drawing.Point(177, 230);
             this.Txt_Abono_Mes.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_Abono_Mes.MaxLength = 5;
             this.Txt_Abono_Mes.Name = "Txt_Abono_Mes";
-            this.Txt_Abono_Mes.Size = new System.Drawing.Size(143, 23);
+            this.Txt_Abono_Mes.Size = new System.Drawing.Size(162, 23);
             this.Txt_Abono_Mes.TabIndex = 41;
             // 
             // Txt_Abono_Acumulado
             // 
-            this.Txt_Abono_Acumulado.Location = new System.Drawing.Point(178, 107);
+            this.Txt_Abono_Acumulado.Location = new System.Drawing.Point(177, 261);
             this.Txt_Abono_Acumulado.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_Abono_Acumulado.MaxLength = 5;
             this.Txt_Abono_Acumulado.Name = "Txt_Abono_Acumulado";
-            this.Txt_Abono_Acumulado.Size = new System.Drawing.Size(143, 23);
+            this.Txt_Abono_Acumulado.Size = new System.Drawing.Size(162, 23);
             this.Txt_Abono_Acumulado.TabIndex = 42;
             // 
             // Txt_Cargos_Acumulados
             // 
-            this.Txt_Cargos_Acumulados.Location = new System.Drawing.Point(178, 138);
+            this.Txt_Cargos_Acumulados.Location = new System.Drawing.Point(177, 292);
             this.Txt_Cargos_Acumulados.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_Cargos_Acumulados.MaxLength = 5;
             this.Txt_Cargos_Acumulados.Name = "Txt_Cargos_Acumulados";
-            this.Txt_Cargos_Acumulados.Size = new System.Drawing.Size(143, 23);
+            this.Txt_Cargos_Acumulados.Size = new System.Drawing.Size(162, 23);
             this.Txt_Cargos_Acumulados.TabIndex = 43;
             // 
             // Txt_Cargos_Mes
             // 
-            this.Txt_Cargos_Mes.Location = new System.Drawing.Point(178, 169);
+            this.Txt_Cargos_Mes.Location = new System.Drawing.Point(177, 323);
             this.Txt_Cargos_Mes.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_Cargos_Mes.MaxLength = 5;
             this.Txt_Cargos_Mes.Name = "Txt_Cargos_Mes";
-            this.Txt_Cargos_Mes.Size = new System.Drawing.Size(143, 23);
+            this.Txt_Cargos_Mes.Size = new System.Drawing.Size(162, 23);
             this.Txt_Cargos_Mes.TabIndex = 44;
             // 
             // Btn_Cierre_Inventario
             // 
             this.Btn_Cierre_Inventario.BackColor = System.Drawing.Color.IndianRed;
             this.Btn_Cierre_Inventario.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Cierre_Inventario.Location = new System.Drawing.Point(238, 220);
+            this.Btn_Cierre_Inventario.Location = new System.Drawing.Point(177, 353);
             this.Btn_Cierre_Inventario.Name = "Btn_Cierre_Inventario";
             this.Btn_Cierre_Inventario.Size = new System.Drawing.Size(162, 28);
             this.Btn_Cierre_Inventario.TabIndex = 45;
@@ -211,7 +221,7 @@ namespace Capa_Vista_Inventario
             // Btn_Cancelar_Cierre
             // 
             this.Btn_Cancelar_Cierre.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Cancelar_Cierre.Location = new System.Drawing.Point(238, 254);
+            this.Btn_Cancelar_Cierre.Location = new System.Drawing.Point(177, 387);
             this.Btn_Cancelar_Cierre.Name = "Btn_Cancelar_Cierre";
             this.Btn_Cancelar_Cierre.Size = new System.Drawing.Size(162, 28);
             this.Btn_Cancelar_Cierre.TabIndex = 46;
@@ -223,47 +233,121 @@ namespace Capa_Vista_Inventario
             // 
             this.Lbl_Nuevo_Saldo_Inicial.AutoSize = true;
             this.Lbl_Nuevo_Saldo_Inicial.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Nuevo_Saldo_Inicial.Location = new System.Drawing.Point(328, 34);
+            this.Lbl_Nuevo_Saldo_Inicial.Location = new System.Drawing.Point(346, 187);
             this.Lbl_Nuevo_Saldo_Inicial.Name = "Lbl_Nuevo_Saldo_Inicial";
-            this.Lbl_Nuevo_Saldo_Inicial.Size = new System.Drawing.Size(173, 18);
+            this.Lbl_Nuevo_Saldo_Inicial.Size = new System.Drawing.Size(151, 18);
             this.Lbl_Nuevo_Saldo_Inicial.TabIndex = 47;
-            this.Lbl_Nuevo_Saldo_Inicial.Text = "Nuevo Saldo Inicial: Q";
+            this.Lbl_Nuevo_Saldo_Inicial.Text = "Nuevo Saldo Inicial";
             // 
-            // label2
+            // Lbl_Abono_Acumulado
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(328, 156);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 18);
-            this.label2.TabIndex = 49;
-            this.label2.Text = "Abonos Acumulados: Q";
+            this.Lbl_Abono_Acumulado.AutoSize = true;
+            this.Lbl_Abono_Acumulado.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Abono_Acumulado.Location = new System.Drawing.Point(346, 309);
+            this.Lbl_Abono_Acumulado.Name = "Lbl_Abono_Acumulado";
+            this.Lbl_Abono_Acumulado.Size = new System.Drawing.Size(157, 18);
+            this.Lbl_Abono_Acumulado.TabIndex = 49;
+            this.Lbl_Abono_Acumulado.Text = "Abonos Acumulados";
             // 
-            // label1
+            // Lbl_Cargos_Acumulados_Cierre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(328, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 18);
-            this.label1.TabIndex = 48;
-            this.label1.Text = "Cargos Acumulados: Q";
+            this.Lbl_Cargos_Acumulados_Cierre.AutoSize = true;
+            this.Lbl_Cargos_Acumulados_Cierre.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Cargos_Acumulados_Cierre.Location = new System.Drawing.Point(346, 246);
+            this.Lbl_Cargos_Acumulados_Cierre.Name = "Lbl_Cargos_Acumulados_Cierre";
+            this.Lbl_Cargos_Acumulados_Cierre.Size = new System.Drawing.Size(157, 18);
+            this.Lbl_Cargos_Acumulados_Cierre.TabIndex = 48;
+            this.Lbl_Cargos_Acumulados_Cierre.Text = "Cargos Acumulados";
+            // 
+            // Pnl_Rangos_Fechas_Cierre
+            // 
+            this.Pnl_Rangos_Fechas_Cierre.Controls.Add(this.Lbl_Rango_Cierre);
+            this.Pnl_Rangos_Fechas_Cierre.Controls.Add(this.Lbl_Fecha_Fin_Cierre);
+            this.Pnl_Rangos_Fechas_Cierre.Controls.Add(this.Lbl_Fecha_Inicio_Cierre);
+            this.Pnl_Rangos_Fechas_Cierre.Controls.Add(this.Dtp_Fecha_Fin_Cierre);
+            this.Pnl_Rangos_Fechas_Cierre.Controls.Add(this.Dtp_Fecha_Inicio_Cierre);
+            this.Pnl_Rangos_Fechas_Cierre.Location = new System.Drawing.Point(12, 41);
+            this.Pnl_Rangos_Fechas_Cierre.Name = "Pnl_Rangos_Fechas_Cierre";
+            this.Pnl_Rangos_Fechas_Cierre.Size = new System.Drawing.Size(610, 122);
+            this.Pnl_Rangos_Fechas_Cierre.TabIndex = 50;
+            // 
+            // Dtp_Fecha_Fin_Cierre
+            // 
+            this.Dtp_Fecha_Fin_Cierre.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dtp_Fecha_Fin_Cierre.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Dtp_Fecha_Fin_Cierre.Location = new System.Drawing.Point(333, 52);
+            this.Dtp_Fecha_Fin_Cierre.Name = "Dtp_Fecha_Fin_Cierre";
+            this.Dtp_Fecha_Fin_Cierre.Size = new System.Drawing.Size(162, 25);
+            this.Dtp_Fecha_Fin_Cierre.TabIndex = 21;
+            this.Dtp_Fecha_Fin_Cierre.Value = new System.DateTime(2025, 10, 26, 0, 0, 0, 0);
+            // 
+            // Dtp_Fecha_Inicio_Cierre
+            // 
+            this.Dtp_Fecha_Inicio_Cierre.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dtp_Fecha_Inicio_Cierre.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Dtp_Fecha_Inicio_Cierre.Location = new System.Drawing.Point(165, 52);
+            this.Dtp_Fecha_Inicio_Cierre.Name = "Dtp_Fecha_Inicio_Cierre";
+            this.Dtp_Fecha_Inicio_Cierre.Size = new System.Drawing.Size(162, 25);
+            this.Dtp_Fecha_Inicio_Cierre.TabIndex = 20;
+            this.Dtp_Fecha_Inicio_Cierre.Value = new System.DateTime(2025, 10, 26, 0, 0, 0, 0);
+            // 
+            // Lbl_Fecha_Inicio_Cierre
+            // 
+            this.Lbl_Fecha_Inicio_Cierre.AutoSize = true;
+            this.Lbl_Fecha_Inicio_Cierre.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Fecha_Inicio_Cierre.Location = new System.Drawing.Point(162, 31);
+            this.Lbl_Fecha_Inicio_Cierre.Name = "Lbl_Fecha_Inicio_Cierre";
+            this.Lbl_Fecha_Inicio_Cierre.Size = new System.Drawing.Size(103, 18);
+            this.Lbl_Fecha_Inicio_Cierre.TabIndex = 48;
+            this.Lbl_Fecha_Inicio_Cierre.Text = "Inicio Cierre";
+            // 
+            // Lbl_Fecha_Fin_Cierre
+            // 
+            this.Lbl_Fecha_Fin_Cierre.AutoSize = true;
+            this.Lbl_Fecha_Fin_Cierre.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Fecha_Fin_Cierre.Location = new System.Drawing.Point(330, 31);
+            this.Lbl_Fecha_Fin_Cierre.Name = "Lbl_Fecha_Fin_Cierre";
+            this.Lbl_Fecha_Fin_Cierre.Size = new System.Drawing.Size(85, 18);
+            this.Lbl_Fecha_Fin_Cierre.TabIndex = 49;
+            this.Lbl_Fecha_Fin_Cierre.Text = "Fin Cierre";
+            // 
+            // Lbl_Rango_Cierre
+            // 
+            this.Lbl_Rango_Cierre.AutoSize = true;
+            this.Lbl_Rango_Cierre.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Rango_Cierre.Location = new System.Drawing.Point(227, 0);
+            this.Lbl_Rango_Cierre.Name = "Lbl_Rango_Cierre";
+            this.Lbl_Rango_Cierre.Size = new System.Drawing.Size(152, 18);
+            this.Lbl_Rango_Cierre.TabIndex = 50;
+            this.Lbl_Rango_Cierre.Text = "Rangos Para Poliza";
+            // 
+            // Lbl_Titulo_Cierre_Inventario
+            // 
+            this.Lbl_Titulo_Cierre_Inventario.AutoSize = true;
+            this.Lbl_Titulo_Cierre_Inventario.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Titulo_Cierre_Inventario.Location = new System.Drawing.Point(145, 9);
+            this.Lbl_Titulo_Cierre_Inventario.Name = "Lbl_Titulo_Cierre_Inventario";
+            this.Lbl_Titulo_Cierre_Inventario.Size = new System.Drawing.Size(359, 29);
+            this.Lbl_Titulo_Cierre_Inventario.TabIndex = 51;
+            this.Lbl_Titulo_Cierre_Inventario.Text = "Traslado de Poliza Inventario";
             // 
             // Frm_Cierre_Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 317);
+            this.ClientSize = new System.Drawing.Size(634, 426);
             this.ControlBox = false;
             this.Controls.Add(this.Pnl_Principal_Cierre);
             this.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(650, 333);
+            this.MinimumSize = new System.Drawing.Size(650, 465);
             this.Name = "Frm_Cierre_Inventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cierre de Inventario";
             this.Pnl_Principal_Cierre.ResumeLayout(false);
             this.Pnl_Principal_Cierre.PerformLayout();
+            this.Pnl_Rangos_Fechas_Cierre.ResumeLayout(false);
+            this.Pnl_Rangos_Fechas_Cierre.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -286,7 +370,14 @@ namespace Capa_Vista_Inventario
         private System.Windows.Forms.TextBox Txt_Cargos_Mes;
         private System.Windows.Forms.Button Btn_Cierre_Inventario;
         private System.Windows.Forms.Label Lbl_Nuevo_Saldo_Inicial;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Lbl_Abono_Acumulado;
+        private System.Windows.Forms.Label Lbl_Cargos_Acumulados_Cierre;
+        private System.Windows.Forms.Panel Pnl_Rangos_Fechas_Cierre;
+        private System.Windows.Forms.Label Lbl_Titulo_Cierre_Inventario;
+        private System.Windows.Forms.Label Lbl_Rango_Cierre;
+        private System.Windows.Forms.Label Lbl_Fecha_Fin_Cierre;
+        private System.Windows.Forms.Label Lbl_Fecha_Inicio_Cierre;
+        private System.Windows.Forms.DateTimePicker Dtp_Fecha_Fin_Cierre;
+        private System.Windows.Forms.DateTimePicker Dtp_Fecha_Inicio_Cierre;
     }
 }
